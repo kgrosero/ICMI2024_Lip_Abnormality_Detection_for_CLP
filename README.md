@@ -5,18 +5,18 @@ Official repository of the paper "Lip Abnormality Detection for Patients with Re
 
 ![Visual Abstract](ICMI_visual_abstract.jpg)
 
-### Installation
+## Installation
 
-# Clone this repository
+#### Clone this repository
 git clone https://github.com/ICMI2024-1257/ICMI2024-1257.github.io.git
 cd ICMI2024-1257.github.io
 
-# Create a conda environment based on yml file
+#### Create a conda environment based on yml file
 conda env create -f icmi_env.yml
 conda activate icmi_env
 conda install conda-forge::insightface https://anaconda.org/conda-forge/insightface
 
-# Download weights
+#### Download weights
 cd ICMI2024-1257.github.io
 curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip
 unzip weights.zip 
