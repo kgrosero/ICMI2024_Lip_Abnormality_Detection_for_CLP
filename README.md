@@ -30,3 +30,22 @@ python scripts/download_pretrained_models.py facelib
 python scripts/download_pretrained_models.py dlib 
 python scripts/download_pretrained_models.py CodeFormer
 ```
+
+## Applying CLP transformations
+
+1. Place all your control images in './data/samples'<br>
+2. Apply CLP transformation on all control samples using the following command:
+```
+python lip_transformation.py --input_dir './data/samples/' --out_dir './data/samples_augment/'
+```
+
+## Applying lip normalization
+
+1. Make sure your image directories are stored in './data/'<br>
+2. Apply lip normalization on both control and augmented samples using the following commands:
+```
+python lip_normalization.py --input_dir './data/samples/' --outdir_process_orig './data/samples_process/' --outdir_norm './data/samples_norm/' --del_temps True
+python lip_normalization.py --input_dir './data/samples_augment/' --outdir_process_orig './data/samples_augment_process/' --outdir_norm './data/samples_augment_norm/' --del_temps True
+```
+The parameter --del_temps True removes directories of the intermediate steps, i.e., the face compression-decompression stage and its preprocessing. If you want to keep the directories, use --del_temps False. <br>
+
