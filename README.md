@@ -14,27 +14,18 @@ cd ICMI2024-1257.github.io<br>
 
 #### Create a conda environment based on yml file
 
-conda env create -f icmi_env.yml
-
-conda activate icmi_env
-
-conda install conda-forge::insightface https://anaconda.org/conda-forge/insightface
+conda env create -f icmi_env.yml<br>
+conda activate icmi_env<br>
+conda install conda-forge::insightface https://anaconda.org/conda-forge/insightface<br>
 
 #### Download weights
 
-cd ICMI2024-1257.github.io
-
-curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip
-
-unzip weights.zip 
-
-cd third_party/CodeFormer
-
-python basicsr/setup.py develop https://github.com/sczhou/CodeFormer/tree/master
-
-python scripts/download_pretrained_models.py facelib
-
-python scripts/download_pretrained_models.py dlib 
-
-python scripts/download_pretrained_models.py CodeFormer
+cd ICMI2024-1257.github.io<br>
+curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip<br>
+unzip weights.zip <br>
+cd third_party/CodeFormer<br>
+python basicsr/setup.py develop https://github.com/sczhou/CodeFormer/tree/master<br>
+python scripts/download_pretrained_models.py facelib<br>
+python scripts/download_pretrained_models.py dlib <br>
+python scripts/download_pretrained_models.py CodeFormer<br>
 
