@@ -8,20 +8,34 @@ Official repository of the paper "Lip Abnormality Detection for Patients with Re
 ## Installation
 
 #### Clone this repository
+
 git clone https://github.com/ICMI2024-1257/ICMI2024-1257.github.io.git
+
 cd ICMI2024-1257.github.io
 
 #### Create a conda environment based on yml file
+
 conda env create -f icmi_env.yml
+
 conda activate icmi_env
+
 conda install conda-forge::insightface https://anaconda.org/conda-forge/insightface
 
 #### Download weights
+
 cd ICMI2024-1257.github.io
+
 curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip
+
 unzip weights.zip 
+
 cd third_party/CodeFormer
+
 python basicsr/setup.py develop https://github.com/sczhou/CodeFormer/tree/master
+
 python scripts/download_pretrained_models.py facelib
+
 python scripts/download_pretrained_models.py dlib 
+
 python scripts/download_pretrained_models.py CodeFormer
+
