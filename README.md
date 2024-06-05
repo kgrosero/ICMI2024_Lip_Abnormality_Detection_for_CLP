@@ -8,9 +8,10 @@ Official repository of the paper "Lip Abnormality Detection for Patients with Re
 ## Installation
 
 #### Clone this repository
-
+```
 git clone https://github.com/ICMI2024-1257/ICMI2024-1257.github.io.git<br>
 cd ICMI2024-1257.github.io<br>
+```
 
 #### Create a conda environment based on yml file
 
