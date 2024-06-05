@@ -19,7 +19,7 @@ conda env create -f icmi_env.yml
 conda activate icmi_env
 conda install conda-forge::insightface https://anaconda.org/conda-forge/insightface
 ```
-#### Download weights
+#### Download pre-trained models
 ```
 cd ICMI2024-1257.github.io
 curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip
@@ -49,3 +49,16 @@ python lip_normalization.py --input_dir './data/samples_augment/' --outdir_proce
 ```
 The parameter --del_temps True removes directories of the intermediate steps, i.e., the face compression-decompression stage and its preprocessing. If you want to keep the directories, use --del_temps False. <br>
 
+## Inference with our pre-trained model for lip abnormality detection
+
+After applying lip normalization on your images, you can evaluate them for lip abnormality detection using our pre-trained model and the following code:
+```
+python inference_lip_abnormality_detection.py --checkpoint './weights/siamesecnn_checkpoint.pt' --input_dir './data/samples_augment/' --input_dir_norm './data/samples_aug_norm/'
+```
+
+## Training your model 
+
+Using your own dataset, you can apply CLP transformation and lip normalization stages to train your own model for lip abnormality detection. Further steps are detailed in this notebook:
+```
+lip_abnormality_detection.ipynb
+```
