@@ -22,7 +22,7 @@ conda install conda-forge::insightface https://anaconda.org/conda-forge/insightf
 #### Download pre-trained models
 ```
 cd ICMI2024-1257.github.io
-curl -L  https://utdallas.box.com/shared/static/ogvh8wz3ou6bga7p7xgtw90mr1rqz8ac --output weights.zip
+curl -L  https://utdallas.box.com/s/x91oipx80hg6kxjx051bvr0qu0sciw8n --output weights.zip
 unzip weights.zip 
 cd third_party/CodeFormer
 python basicsr/setup.py develop https://github.com/sczhou/CodeFormer/tree/master
